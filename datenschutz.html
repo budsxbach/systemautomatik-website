@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datenschutzerklärung – Online Infinity Solutions</title>
+    <meta name="description" content="Datenschutzerklärung von Online Infinity Solutions. Informationen zur Datenverarbeitung gemäß DSGVO – kein Tracking, keine Cookies.">
+    <link rel="canonical" href="https://www.systemautomatik.com/datenschutz.html">
+    <meta name="robots" content="noindex, follow">
+
+    <!-- Sicherheits-Meta-Tags -->
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta name="referrer" content="strict-origin-when-cross-origin">
+
+    <!-- Favicon -->
+    <link rel="icon" href="/favicon.ico" sizes="any">
+    <link rel="icon" href="/icon.svg" type="image/svg+xml">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+
     <style>
         *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 
@@ -26,8 +41,32 @@
             min-height: 100vh;
         }
 
+        /* === Skip-Link (Accessibility) === */
+        .skip-link {
+            position: absolute;
+            top: -100%;
+            left: 0;
+            background: var(--accent);
+            color: var(--bg-dark);
+            padding: 8px 16px;
+            font-weight: 700;
+            z-index: 9999;
+            border-radius: 0 0 var(--radius) 0;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
         a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
         a:hover { color: var(--text-bright); }
+
+        /* Sichtbarer Fokus-Stil für Tastaturnavigation (WCAG 2.2) */
+        :focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 3px;
+            border-radius: 4px;
+        }
 
         .container {
             max-width: 1100px;
@@ -128,8 +167,11 @@
 </head>
 <body>
 
+<!-- Skip-Link für Tastaturnutzer (Accessibility WCAG 2.2) -->
+<a href="#main-content" class="skip-link">Zum Hauptinhalt springen</a>
+
 <!-- Navigation -->
-<nav>
+<nav aria-label="Hauptnavigation">
     <div class="container">
         <a href="index.html" class="logo">Online Infinity <span>Solutions</span></a>
         <ul class="nav-links">
@@ -140,7 +182,8 @@
     </div>
 </nav>
 
-<!-- Datenschutzerklärung -->
+<!-- Hauptinhalt -->
+<main id="main-content">
 <div class="container">
     <div class="page-content">
         <h1>Datenschutzerklärung</h1>
@@ -231,6 +274,7 @@
         <p style="margin-top: 48px; color: rgba(184, 212, 227, 0.5); font-size: 0.9rem;">Stand: März 2026</p>
     </div>
 </div>
+</main>
 
 <!-- Footer -->
 <footer>
