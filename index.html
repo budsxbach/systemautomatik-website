@@ -151,6 +151,10 @@
             position: relative;
         }
 
+        .product-card.clickable {
+            cursor: pointer;
+        }
+
         .product-card:hover {
             border-color: rgba(0, 240, 181, 0.35);
             box-shadow: var(--glow);
@@ -177,11 +181,6 @@
             padding: 5px 16px;
             font-size: 0.8rem;
             font-weight: 600;
-        }
-
-        .badge-soon {
-            background: rgba(0, 240, 181, 0.08);
-            color: var(--accent-dim);
         }
 
         .product-card.placeholder {
@@ -289,10 +288,14 @@
         <p class="section-subtitle">Digitale Lösungen für moderne Unternehmen</p>
         <div class="products-grid">
             <!-- Bewerbercheck-Pro -->
-            <div class="product-card">
-                <h3>Bewerbercheck-Pro</h3>
-                <p>KI-gestützte Bewerbungsverarbeitung für Unternehmen. Bewerbungen werden automatisch analysiert, bewertet und strukturiert in Ihre bestehenden Systeme übertragen – schnell, objektiv und datenschutzkonform.</p>
-                <span class="badge badge-soon">Demnächst verfügbar</span>
+            <div class="product-card" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+                <div>
+                    <h3 style="font-size: 1.5rem; margin-bottom: 8px;">Bewerbercheck-Pro</h3>
+                    <p style="margin: 0; font-size: 0.95rem;">KI-gestützte Bewerbungsanalyse für Unternehmen</p>
+                </div>
+                <a href="https://bewerbercheck-pro.systemautomatik.com" style="display: inline-block; background: var(--accent); color: var(--bg-dark); padding: 12px 28px; border-radius: 8px; font-weight: 700; font-size: 1rem; transition: opacity 0.2s;" onmouseover="this.style.opacity='0.85'" onmouseout="this.style.opacity='1'">
+                    Zum Produkt →
+                </a>
             </div>
             <!-- Platzhalter für weitere Produkte -->
             <div class="product-card placeholder">
@@ -327,7 +330,7 @@
             <div class="footer-col">
                 <h4>Erreichbarkeit</h4>
                 <p>Telefon: +49 1523 8415504</p>
-                <a href="mailto:info@systemautomatik.de">info@systemautomatik.de</a>
+                <a href="mailto:info@systemautomatik.com">info@systemautomatik.com</a>
             </div>
             <div class="footer-col">
                 <h4>Rechtliches</h4>
