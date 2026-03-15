@@ -4,295 +4,282 @@
     <meta charset="UTF-8">
     <script>if(location.protocol!=='https:')location.replace('https:'+location.href.substring(location.protocol.length));</script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Online Infinity Solutions – Intelligente Software-Lösungen für Unternehmensautomatisierung</title>
+    <title>Online Infinity Solutions – Digitale Automatisierung</title>
+    <meta name="description" content="Online Infinity Solutions entwickelt intelligente Software-Lösungen für Unternehmen. Automatisierung, KI-gestützte Prozesse und digitale Transformation.">
 
-    <!-- SEO Meta Tags -->
-    <meta name="description" content="Online Infinity Solutions entwickelt intelligente Software-Lösungen und bietet KI-gestützte Automatisierung für Unternehmen. Bewerbercheck-Pro und weitere digitale Lösungen.">
-    <meta name="keywords" content="Softwarelösungen, Automatisierung, KI, Bewerbercheck, Hamburg, Digitale Transformation">
-    <meta name="author" content="Online Infinity Solutions">
-    <meta name="robots" content="index, follow">
-
-    <!-- Open Graph Meta Tags (Social Media) -->
+    <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.systemautomatik.com/">
     <meta property="og:title" content="Online Infinity Solutions – Digitale Automatisierung">
-    <meta property="og:description" content="Intelligente Software-Lösungen, die Geschäftsprozesse automatisieren und Unternehmen effizienter machen.">
-    <meta property="og:image" content="https://www.systemautomatik.com/ois-logo-1200.png">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
+    <meta property="og:description" content="Intelligente Software-Lösungen, die Geschäftsprozesse automatisieren.">
     <meta property="og:locale" content="de_DE">
     <meta property="og:site_name" content="Online Infinity Solutions">
 
-    <!-- Twitter Card Meta Tags -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Online Infinity Solutions – Digitale Automatisierung">
-    <meta name="twitter:description" content="Intelligente Software-Lösungen für moderne Unternehmen">
-    <meta name="twitter:image" content="https://www.systemautomatik.com/ois-logo-1200.png">
-
-    <!-- Additional Meta Tags -->
-    <meta name="theme-color" content="#0a1628">
-    <meta name="color-scheme" content="dark light">
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-
-    <!-- Security & SEO -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="referrer" content="strict-origin-when-cross-origin">
-
-    <!-- Canonical URL -->
+    <!-- Canonical & Robots -->
     <link rel="canonical" href="https://www.systemautomatik.com/">
+    <meta name="robots" content="index, follow">
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0a1628">
 
     <!-- Favicon -->
     <link rel="icon" href="/favicon.ico" sizes="any">
     <link rel="icon" href="/icon.svg" type="image/svg+xml">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 
-    <!-- Structured Data (Schema.org) - JSON-LD Format -->
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "Organization",
-        "name": "Online Infinity Solutions",
-        "alternateName": "OIS",
-        "url": "https://www.systemautomatik.com",
-        "description": "Online Infinity Solutions ist ein Technologieunternehmen aus Hamburg, das intelligente Software-Lösungen für die Automatisierung von Geschäftsprozessen entwickelt.",
-        "address": {
-            "@type": "PostalAddress",
-            "streetAddress": "Pestalozzistrasse 25",
-            "addressLocality": "Hamburg",
-            "postalCode": "22305",
-            "addressCountry": "DE"
-        },
-        "contactPoint": {
-            "@type": "ContactPoint",
-            "telephone": "+49-1523-8415504",
-            "contactType": "Customer Service",
-            "email": "info@systemautomatik.com",
-            "areaServed": ["DE", "AT", "CH"],
-            "availableLanguage": ["de", "en"]
-        },
-        "foundingDate": "2024",
-        "foundingLocation": "Hamburg, Germany"
-    }
-    </script>
-
     <style>
-        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        /* === Reset & Base === */
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --bg-dark: #0a1628;
+            --bg-card: #0d1f3c;
+            --accent: #00f0b5;
+            --accent-dim: #00d4aa;
+            --text: #b8d4e3;
+            --text-bright: #ffffff;
+            --glow: 0 0 20px rgba(0, 240, 181, 0.3), 0 0 60px rgba(0, 240, 181, 0.1);
+            --glow-strong: 0 0 30px rgba(0, 240, 181, 0.5), 0 0 80px rgba(0, 240, 181, 0.2);
+            --radius: 12px;
+        }
 
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            background: #0a1628;
-            color: #e2e8f0;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg-dark);
+            color: var(--text);
+            line-height: 1.7;
+            min-height: 100vh;
         }
 
-        /* NAV */
+        a { color: var(--accent); text-decoration: none; transition: color 0.2s; }
+        a:hover { color: var(--text-bright); }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* === Navigation === */
         nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: rgba(10, 22, 40, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding: 20px 0;
+            border-bottom: 1px solid rgba(0, 240, 181, 0.1);
         }
-        .navbar {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-            height: 64px;
+
+        nav .container {
             display: flex;
-            align-items: center;
             justify-content: space-between;
-        }
-        .logo-text {
-            font-size: 1.2rem;
-            font-weight: 700;
-            color: #fff;
-            letter-spacing: -0.3px;
-        }
-        .highlight { color: #3b82f6; }
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 24px;
-        }
-        .nav-links a {
-            color: #94a3b8;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.2s;
-        }
-        .nav-links a:hover { color: #fff; }
-
-        /* HERO */
-        .hero {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 100px 24px 80px;
-            text-align: center;
-        }
-        .logo-circle {
-            width: 80px;
-            height: 80px;
-            border-radius: 50%;
-            background: linear-gradient(135deg, #1e40af, #3b82f6);
-            display: flex;
             align-items: center;
-            justify-content: center;
-            margin: 0 auto 32px;
-            font-size: 1.4rem;
-            font-weight: 800;
-            color: #fff;
-            box-shadow: 0 0 40px rgba(59, 130, 246, 0.4);
-        }
-        h1 {
-            font-size: clamp(2rem, 5vw, 3.5rem);
-            font-weight: 800;
-            color: #fff;
-            margin-bottom: 20px;
-            letter-spacing: -1px;
-        }
-        .hero p {
-            font-size: 1.15rem;
-            color: #94a3b8;
-            max-width: 600px;
-            margin: 0 auto 40px;
+            flex-wrap: wrap;
+            gap: 16px;
         }
 
-        /* SECTIONS */
-        section { padding: 80px 0; }
-        .section-inner {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 0 24px;
-        }
-        h2 {
-            font-size: clamp(1.6rem, 3vw, 2.4rem);
-            font-weight: 700;
-            color: #fff;
-            margin-bottom: 12px;
-        }
-        .section-subtitle {
-            color: #64748b;
-            margin-bottom: 48px;
-            font-size: 1rem;
-        }
-
-        /* PRODUCT GRID */
-        .product-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 24px;
-        }
-        .product-card {
-            background: rgba(255,255,255,0.04);
-            border: 1px solid rgba(255,255,255,0.08);
-            border-radius: 16px;
-            padding: 32px;
-            transition: border-color 0.2s, transform 0.2s;
-        }
-        .product-card:hover {
-            border-color: rgba(59,130,246,0.4);
-            transform: translateY(-2px);
-        }
-        .product-card h3 {
+        .logo {
             font-size: 1.25rem;
             font-weight: 700;
-            color: #fff;
-            margin-bottom: 10px;
+            color: var(--text-bright);
+            letter-spacing: -0.5px;
         }
-        .product-card p {
-            color: #94a3b8;
-            margin-bottom: 24px;
-        }
-        .product-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            background: #3b82f6;
-            color: #fff;
-            text-decoration: none;
-            padding: 10px 20px;
-            border-radius: 8px;
-            font-weight: 600;
+
+        .logo span { color: var(--accent); }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+            list-style: none;
             font-size: 0.9rem;
-            transition: background 0.2s;
         }
-        .product-link:hover { background: #2563eb; }
-        .product-card-placeholder {
+
+        /* === Hero === */
+        .hero {
+            text-align: center;
+            padding: 100px 0 80px;
+            position: relative;
+        }
+
+        .glow-ring {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            border: 2px solid var(--accent);
+            margin: 0 auto 40px;
             display: flex;
             align-items: center;
             justify-content: center;
-            min-height: 140px;
-        }
-        .product-card-placeholder p {
-            color: #475569;
-            font-style: italic;
-            margin: 0;
+            box-shadow: var(--glow-strong), inset 0 0 30px rgba(0, 240, 181, 0.1);
+            animation: pulse 4s ease-in-out infinite;
         }
 
-        /* ABOUT */
-        #ueber-uns { background: rgba(255,255,255,0.02); }
-        .about p {
-            color: #94a3b8;
-            max-width: 720px;
+        .glow-ring-inner {
+            font-size: 3rem;
+            color: var(--accent);
+            text-shadow: 0 0 20px rgba(0, 240, 181, 0.6);
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: var(--glow), inset 0 0 30px rgba(0, 240, 181, 0.05); }
+            50% { box-shadow: var(--glow-strong), inset 0 0 40px rgba(0, 240, 181, 0.15); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.2rem);
+            color: var(--text-bright);
+            font-weight: 700;
             margin-bottom: 16px;
+            letter-spacing: -1px;
         }
 
-        /* FOOTER */
-        footer {
-            background: rgba(0,0,0,0.3);
-            border-top: 1px solid rgba(255,255,255,0.06);
-            padding: 60px 0 32px;
-        }
-        .footer-content {
-            max-width: 1100px;
+        .hero .tagline {
+            font-size: clamp(1rem, 2.5vw, 1.25rem);
+            color: var(--text);
+            max-width: 600px;
             margin: 0 auto;
-            padding: 0 24px;
+        }
+
+        .hero .tagline span {
+            color: var(--accent);
+            text-shadow: 0 0 10px rgba(0, 240, 181, 0.3);
+        }
+
+        /* === Sections === */
+        section { padding: 80px 0; }
+
+        .section-title {
+            font-size: 1.75rem;
+            color: var(--text-bright);
+            margin-bottom: 12px;
+            font-weight: 700;
+        }
+
+        .section-subtitle {
+            color: var(--text);
+            margin-bottom: 48px;
+            font-size: 1.05rem;
+        }
+
+        /* === Produkte === */
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 28px;
+        }
+
+        .product-card {
+            background: var(--bg-card);
+            border: 1px solid rgba(0, 240, 181, 0.12);
+            border-radius: var(--radius);
+            padding: 36px 28px;
+            transition: border-color 0.3s, box-shadow 0.3s;
+            position: relative;
+        }
+
+        .product-card:hover {
+            border-color: rgba(0, 240, 181, 0.35);
+            box-shadow: var(--glow);
+        }
+
+        .product-card h3 {
+            color: var(--text-bright);
+            font-size: 1.5rem;
+            margin-bottom: 8px;
+        }
+
+        .product-card p {
+            font-size: 0.95rem;
+            line-height: 1.7;
+            margin-bottom: 20px;
+        }
+
+        .btn-accent {
+            display: inline-block;
+            background: var(--accent);
+            color: var(--bg-dark);
+            padding: 12px 28px;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 1rem;
+            transition: opacity 0.2s;
+        }
+        .btn-accent:hover { opacity: 0.85; color: var(--bg-dark); }
+
+        .product-card.placeholder {
+            border-style: dashed;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            min-height: 220px;
+        }
+
+        .product-card.placeholder .plus {
+            font-size: 2.5rem;
+            color: rgba(0, 240, 181, 0.3);
+            margin-bottom: 12px;
+        }
+
+        /* === Über uns === */
+        .about-content {
+            max-width: 700px;
+        }
+
+        .about-content p {
+            margin-bottom: 16px;
+            font-size: 1.05rem;
+        }
+
+        /* === Footer === */
+        footer {
+            border-top: 1px solid rgba(0, 240, 181, 0.1);
+            padding: 48px 0 32px;
+            margin-top: 40px;
+        }
+
+        .footer-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 40px;
+            gap: 36px;
             margin-bottom: 40px;
         }
-        .footer-section h3 {
-            color: #fff;
+
+        .footer-col h4 {
+            color: var(--text-bright);
             font-size: 0.95rem;
-            font-weight: 600;
             margin-bottom: 16px;
-        }
-        .footer-section p, .footer-section li {
-            color: #64748b;
-            font-size: 0.9rem;
-            margin-bottom: 6px;
-        }
-        .footer-section ul { list-style: none; }
-        .footer-section a {
-            color: #64748b;
-            text-decoration: none;
-            transition: color 0.2s;
-        }
-        .footer-section a:hover { color: #94a3b8; }
-        .footer-bottom {
-            max-width: 1100px;
-            margin: 0 auto;
-            padding: 24px 24px 0;
-            border-top: 1px solid rgba(255,255,255,0.06);
-            text-align: center;
-            color: #475569;
-            font-size: 0.85rem;
+            font-weight: 600;
         }
 
+        .footer-col p,
+        .footer-col a {
+            display: block;
+            font-size: 0.9rem;
+            line-height: 2;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            font-size: 0.85rem;
+            color: rgba(184, 212, 227, 0.5);
+            padding-top: 24px;
+            border-top: 1px solid rgba(0, 240, 181, 0.06);
+        }
+
+        /* === Responsive === */
         @media (max-width: 600px) {
+            .hero { padding: 60px 0 50px; }
+            .glow-ring { width: 130px; height: 130px; }
+            .glow-ring-inner { font-size: 2.2rem; }
+            section { padding: 50px 0; }
             .nav-links { gap: 16px; }
-            .hero { padding: 60px 24px 50px; }
         }
     </style>
 </head>
 <body>
 
+<!-- Navigation -->
 <nav aria-label="Hauptnavigation">
-    <div class="navbar">
-        <span class="logo-text">Online Infinity <span class="highlight">Solutions</span></span>
+    <div class="container">
+        <div class="logo">Online Infinity <span>Solutions</span></div>
         <ul class="nav-links">
             <li><a href="#produkte">Produkte</a></li>
             <li><a href="#ueber-uns">Über uns</a></li>
@@ -302,71 +289,73 @@
     </div>
 </nav>
 
-<main id="main-content">
-
-    <!-- Hero -->
-    <section aria-label="Unternehmenspräsentation">
-        <div class="hero">
-            <div class="logo-circle">OIS</div>
-            <h1>Online Infinity Solutions</h1>
-            <p>Wir entwickeln <span class="highlight">intelligente Software-Lösungen</span>, die Geschäftsprozesse automatisieren und Unternehmen effizienter machen.</p>
+<!-- Hero -->
+<section class="hero" aria-label="Unternehmenspräsentation">
+    <div class="container">
+        <div class="glow-ring">
+            <div class="glow-ring-inner">OIS</div>
         </div>
-    </section>
+        <h1>Online Infinity Solutions</h1>
+        <p class="tagline">Wir entwickeln <span>intelligente Software-Lösungen</span>, die Geschäftsprozesse automatisieren und Unternehmen effizienter machen.</p>
+    </div>
+</section>
 
-    <!-- Produkte -->
-    <section id="produkte" aria-label="Unsere Produkte">
-        <div class="section-inner">
-            <h2>Unsere Produkte</h2>
-            <p class="section-subtitle">Digitale Lösungen für moderne Unternehmen</p>
-            <div class="product-grid">
-                <article class="product-card">
+<!-- Produkte -->
+<section id="produkte" aria-label="Unsere Produkte">
+    <div class="container">
+        <h2 class="section-title">Unsere Produkte</h2>
+        <p class="section-subtitle">Digitale Lösungen für moderne Unternehmen</p>
+        <div class="products-grid">
+            <div class="product-card" style="display: flex; flex-direction: column; align-items: flex-start; gap: 20px;">
+                <div>
                     <h3>Bewerbercheck-Pro</h3>
-                    <p>KI-gestützte Bewerbungsanalyse für Unternehmen</p>
-                    <a href="https://bewerbercheck-pro.systemautomatik.com" class="product-link">Zum Produkt →</a>
-                </article>
-                <article class="product-card product-card-placeholder">
-                    <p>+ Weitere Lösungen in Entwicklung</p>
-                </article>
+                    <p style="margin: 0;">KI-gestützte Bewerbungsanalyse für Unternehmen</p>
+                </div>
+                <a href="https://bewerbercheck-pro.systemautomatik.com" class="btn-accent">Zum Produkt →</a>
             </div>
-        </div>
-    </section>
-
-    <!-- Über uns -->
-    <section id="ueber-uns" aria-label="Über Online Infinity Solutions">
-        <div class="section-inner">
-            <h2>Über uns</h2>
-            <div class="about">
-                <p>Online Infinity Solutions ist ein Hamburger Technologieunternehmen, das sich auf die Entwicklung intelligenter Software-Lösungen spezialisiert hat. Unser Fokus liegt auf der Automatisierung von Geschäftsprozessen durch den Einsatz moderner KI-Technologien.</p>
-                <p>Wir glauben, dass Unternehmen jeder Größe von intelligenter Automatisierung profitieren können – ohne komplizierte Implementierung oder hohe Einstiegshürden. Unsere Produkte sind so konzipiert, dass sie sich nahtlos in bestehende Arbeitsabläufe integrieren.</p>
+            <div class="product-card placeholder">
+                <div class="plus">+</div>
+                <p>Weitere Lösungen in Entwicklung</p>
             </div>
-        </div>
-    </section>
-
-</main>
-
-<footer>
-    <div class="footer-content">
-        <div class="footer-section">
-            <h3>Kontakt</h3>
-            <p><strong style="color:#94a3b8">Online Infinity Solutions</strong></p>
-            <p>Pestalozzistrasse 25</p>
-            <p>22305 Hamburg</p>
-        </div>
-        <div class="footer-section">
-            <h3>Erreichbarkeit</h3>
-            <p>Telefon: <a href="tel:+4915238415504">+49 1523 8415504</a></p>
-            <p><a href="mailto:info@systemautomatik.com">info@systemautomatik.com</a></p>
-        </div>
-        <div class="footer-section">
-            <h3>Rechtliches</h3>
-            <ul>
-                <li><a href="impressum.html">Impressum</a></li>
-                <li><a href="datenschutz.html">Datenschutzerklärung</a></li>
-            </ul>
         </div>
     </div>
-    <div class="footer-bottom">
-        <p>&copy; 2026 Online Infinity Solutions. Alle Rechte vorbehalten.</p>
+</section>
+
+<!-- Über uns -->
+<section id="ueber-uns" aria-label="Über Online Infinity Solutions">
+    <div class="container">
+        <h2 class="section-title">Über uns</h2>
+        <div class="about-content">
+            <p>Online Infinity Solutions ist ein Hamburger Technologieunternehmen, das sich auf die Entwicklung intelligenter Software-Lösungen spezialisiert hat. Unser Fokus liegt auf der Automatisierung von Geschäftsprozessen durch den Einsatz moderner KI-Technologien.</p>
+            <p>Wir glauben, dass Unternehmen jeder Größe von intelligenter Automatisierung profitieren können – ohne komplizierte Implementierung oder hohe Einstiegshürden. Unsere Produkte sind so konzipiert, dass sie sich nahtlos in bestehende Arbeitsabläufe integrieren.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>Kontakt</h4>
+                <p>Online Infinity Solutions</p>
+                <p>Pestalozzistrasse 25</p>
+                <p>22305 Hamburg</p>
+            </div>
+            <div class="footer-col">
+                <h4>Erreichbarkeit</h4>
+                <p>Telefon: <a href="tel:+4915238415504">+49 1523 8415504</a></p>
+                <a href="mailto:info@systemautomatik.com">info@systemautomatik.com</a>
+            </div>
+            <div class="footer-col">
+                <h4>Rechtliches</h4>
+                <a href="impressum.html">Impressum</a>
+                <a href="datenschutz.html">Datenschutzerklärung</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2026 Online Infinity Solutions. Alle Rechte vorbehalten.
+        </div>
     </div>
 </footer>
 
